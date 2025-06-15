@@ -1,28 +1,74 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="16dp"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="24dp">
 
-    <Button
-        android:id="@+id/uploadButton"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#6200EE"
+        android:elevation="4dp"
+        android:title="QR 코드 스캐너"
+        android:titleTextColor="#FFFFFF"
+        />
+    <!-- 타이틀 -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="이미지 선택" />
+        android:text="QR 코드 스캐너"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#BB86FC"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"/>
 
-    <Button
-        android:id="@+id/scanDownloadsButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="다운로드 폴더 QR 스캔"
-        android:layout_marginTop="16dp"/>
-
+    <!-- 스캔 결과 표시 -->
     <TextView
         android:id="@+id/resultText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="30dp"
-        android:text="결과가 여기에 표시됩니다"
-        android:textSize="16sp" />
-</LinearLayout>
+        android:text="스캔 결과가 여기에 표시됩니다."
+        android:textColor="#FFDAA520"
+        android:textSize="18sp"
+        android:background="#22000000"
+        android:padding="16dp"
+        android:layout_below="@id/appTitle"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:elevation="4dp"
+        android:minHeight="100dp" />
+
+    <!-- 이미지 업로드 버튼 -->
+    <Button
+        android:id="@+id/uploadButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="이미지에서 QR 스캔"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:backgroundTint="#6200EE"
+        android:layout_below="@id/resultText"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:elevation="10dp"
+        android:letterSpacing="0.07"
+        android:stateListAnimator="@null"
+        android:drawablePadding="12dp"
+        android:background="@drawable/btn_gradient"/>
+
+</RelativeLayout>
