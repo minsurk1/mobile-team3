@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable bg_dark_gradient
+drawable btn_gradient
+drawable btn_gradient_teal
+drawable ic_baseline_camera_alt_24
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_qr_placeholder
+drawable qrbox
+font do_hyeon_regular
+id appTitle
+id middleImage
+id resultText
+id rootLayout
+id startButton
+id startRoot
+id startTitle
+id subText
+id toolbar
+id uploadButton
+layout activity_main
+layout activity_start
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.MobileProject
+style Theme.MobileProject
+style Theme.Test
+xml backup_rules
+xml data_extraction_rules
